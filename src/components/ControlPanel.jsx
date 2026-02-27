@@ -22,7 +22,7 @@ const ControlPanel = ({ onFilesSelected, stats }) => {
   const pickCSV = async () => {
     try {
       const result = await DocumentPicker.getDocumentAsync({
-        type: 'text/csv',
+        type: '*/*',
       });
       if (result.type === 'success') {
         onFilesSelected({ csv: result });
